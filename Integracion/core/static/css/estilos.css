@@ -13,6 +13,7 @@ header{
     top: 0;
     left: 0;
     background: #fff;
+    /*z-index: 1000;*/
 }
 
 /*Header Superior*/
@@ -24,6 +25,7 @@ header{
     align-items: center;
     justify-content: space-between;
     padding: 20px;
+    z-index: 1000;
 }
 
 .logo img{
@@ -43,6 +45,7 @@ header{
     max-width: 1200px;
     margin: auto;
     height: 100%;
+    z-index: 1000;
 }
 
 nav{
@@ -144,6 +147,7 @@ nav ul li ul li a{
     font-size: 14px;
     text-transform: uppercase;
     transition: all 300ms ease;
+    z-index: 1000;
 }
 
 nav ul li ul li a:hover{
@@ -179,6 +183,7 @@ nav ul li ul li a:hover{
     
     .header__superior{
         padding: 10px;
+        z-index: 1000;
     }
     .logo img{
         width: 80px;
@@ -195,43 +200,43 @@ nav ul li ul li a:hover{
         z-index: 100;
         opacity: 0;
         visibility: hidden;
+        
     }
     nav > ul > li a:hover{
         transform: scale(1);
+        z-index: 100;
     }
     nav ul li ul{
         left: 90px;
+        z-index: 100;
     }
 
     nav >ul >li:hover ul{
         top: 50px;
+        z-index: 100;
     }
 
     nav > ul > li:first-child a{
         background-position: 20px;
+        z-index: 100;
     }
     #selected{
         transform: scale(1);
+        z-index: 100;
     }
     #label__check{
         display: block;
+        z-index: 100;
     }
     .icon_menu{
         display: flex;
+        z-index: 100;
     }
     #check__menu:checked ~ nav > ul{
         height: 300px;
         visibility: visible;
         opacity: 1;
+        z-index: 100;
     }
 }
 
-/**/
-.carruselimg, #container{
-    height: 305px;
-    width: 100%;
-    object-fit: cover;
-}
-.justify-content-center{
-    justify-content: center !important;
-}
