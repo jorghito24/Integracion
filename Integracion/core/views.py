@@ -13,3 +13,6 @@ def login(request):
 
 def nosotros(request):
     return render(request, 'nosotros.html')
+
+def vistaresidente(request):
+    return render(request, 'vistaresidente.html')
