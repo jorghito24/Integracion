@@ -8,9 +8,6 @@ def index(request):
 def vistadmin(request):
     return render(request, 'vistadmin.html')
 
-def vistaresidente(request):
-    return render(request, 'vistaresidente.html')
-
 def login(request):
     return render(request, 'login.html')
 
