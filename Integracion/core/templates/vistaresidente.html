@@ -20,8 +20,10 @@
     <header>
         <div class="header__superior">
             <div class="logo">
-                <img src="{%static '../static/img/otro.png'%}" alt="">
-            </div>
+                <a href="{% url 'vistaresidente' %}">
+                  <img src="{%static '../static/img/otro.png'%}" alt="">
+                </a>
+              </div>
         </div>
         <div class="container__menu">
             <div class="menu">
@@ -32,7 +34,7 @@
                 <nav>
                     <ul>
                         <li><a href="#">Ver multas</a></li>
-                        <li><a href="#">Pago en Línea</a></li>
+                        <li><a href="{% url 'pagogastoscomues' %}">Pago en Línea</a></li>
                         <li><a href="#">Noticias</a>
                             <ul>
                                 <li><a href="#">Eventos</a></li>
