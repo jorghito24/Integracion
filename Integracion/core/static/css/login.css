@@ -42,7 +42,7 @@
   
 .login-box input[type="text"], .login-box input[type="password"] {
     border: none;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #000000;
     background: transparent;
     outline: none;
     height: 40px;
@@ -72,7 +72,7 @@
     line-height: 20px;
     color: darkgrey;
 }
-  
+
 .login-box a:hover {
     color: #fff;
 }
