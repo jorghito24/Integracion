@@ -32,7 +32,7 @@
                 <nav>
                     <ul>
                         <li><a href="#">Ver multas</a></li>
-                        <li><a href="#">Pago en Línea</a></li>
+                        <li><a href="{% url 'pagogastoscomues' %}">Pago en Línea</a></li>
                         <li><a href="#">Noticias</a>
                             <ul>
                                 <li><a href="#">Eventos</a></li>
@@ -138,9 +138,11 @@
                         </h2>
                         <p>Si se encuentra con alguna dificultad puede acudir a nuestro whatsapp local para ofrecerle
                             una solución</p>
-                        <div class="row justify-content-center" id="paddingboton">
-                            <button class="boton"><span>Contactar</span></button>
-                        </div>
+                            <a href="{% url 'contacto' %}">
+                                <div class="row justify-content-center" id="paddingboton">
+                                  <button class="boton"><span>Contactar</span></button>
+                                </div>
+                              </a>
                     </div>
                 </div>
             </div>

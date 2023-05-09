@@ -15,7 +15,10 @@ def nosotros(request):
     return render(request, 'core/nosotros.html')
 
 def vistaresidente(request):
-    return render(request, 'core/vistaresidente.html')
+    return render(request, 'vistaresidente.html')
 
 def contacto(request):
     return render(request, 'contacto.html')
+
+def pagogastoscomues(request):
+    return render(request, 'pagogastoscomues.html')
