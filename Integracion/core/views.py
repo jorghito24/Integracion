@@ -3,20 +3,19 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return render(request, 'index.html')
+    return render(request, 'core/index.html')
 
 def vistadmin(request):
-    return render(request, 'vistadmin.html')
+    return render(request, 'core/vistadmin.html')
 
 def login(request):
-    return render(request, 'login.html')
+    return render(request, 'core/login.html')
 
 def nosotros(request):
-    return render(request, 'nosotros.html')
+    return render(request, 'core/nosotros.html')
 
 def vistaresidente(request):
-    return render(request, 'vistaresidente.html')
+    return render(request, 'core/vistaresidente.html')
 
-def pagogastoscomues(request):
-    return render(request, 'pagogastoscomues.html')
-
+def contacto(request):
+    return render(request, 'contacto.html')

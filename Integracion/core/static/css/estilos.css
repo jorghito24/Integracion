@@ -1,11 +1,10 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-
+    
 }
 
 body {
@@ -19,97 +18,8 @@ header {
     left: 0;
     background: #fff;
     text-decoration: none;
-    /*z-index: 1000;*/
 }
 
-/*Boton y tarjetas*/
-.boton {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 70%;
-    height: 40px;
-    background: black;
-    color: white;
-    font-size: 25px;
-    font-weight: 500;
-    border: none;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: .3s ease all;
-    border-radius: 20px;
-    position: relative;
-    overflow: hidden;
-}
-
-.boton span {
-    position: relative;
-    z-index: 2;
-    transition: .3s ease all;
-}
-
-.boton::after {
-    content: "";
-    width: 110%;
-    height: 50px;
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: calc(-100% - 40px);
-    background: black;
-    border-bottom: 50px solid rgb(21, 228, 131);
-    border-right: 40px solid transparent;
-    transition: .4s ease-in-out all;
-}
-
-.boton:hover::after {
-    left: 0;
-}
-
-#paddingboton {
-    padding-bottom: 15px;
-}
-
-/*Texto tarjetas*/
-
-#espaciado {
-    font: var(--font_2);
-    letter-spacing: 0.3em;
-    line-height: normal;
-    text-align: center;
-    font-size: 34px;
-}
-
-.borde {
-    border-radius: 5px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
-}
-
-.borde.boton {
-    align-items: center;
-}
-
-/*Textos*/
-p {
-    position: relative;
-    text-align: center;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-left: 75px;
-    width: 80%;
-}
-
-/*Carrusel*/
-
-.carruselimg {
-    height: 305px;
-    width: 100%;
-    object-fit: cover;
-}
-
-#container {
-    padding-top: 25px;
-}
 
 /*Header Superior*/
 
@@ -150,14 +60,12 @@ nav {
 nav>ul {
     height: 100%;
     display: flex;
-    z-index: 100;
 }
 
-nav >ul> li {
+nav ul li {
     height: 100%;
     list-style: none;
     position: relative;
-    z-index: 100;
 }
 
 nav>ul>li>a {
@@ -171,7 +79,6 @@ nav>ul>li>a {
     font-size: 14px;
     transition: all 300ms ease;
     text-decoration: none;
-    z-index: 100;
 }
 
 nav>ul>li>a:hover {
@@ -179,7 +86,6 @@ nav>ul>li>a:hover {
     background: #305c79;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
     color: white;
-    z-index: 100;
 }
 
 
@@ -197,7 +103,7 @@ nav ul li ul {
     visibility: hidden;
     opacity: 0;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-    z-index: 100;
+    z-index: 10;
     transition: all 300ms ease;
 }
 
@@ -206,7 +112,6 @@ nav ul li:hover ul {
     opacity: 1;
     top: 70px;
     color: #fff;
-    z-index: 100;
 }
 
 nav ul li ul::before {
@@ -219,7 +124,6 @@ nav ul li ul::before {
     position: absolute;
     top: -12px;
     left: 20px;
-    z-index: 100;
 }
 
 nav ul li ul li a {
@@ -240,7 +144,6 @@ nav ul li ul li a:hover {
     transform: scale(1.1);
     padding-left: 30px;
     font-size: 14px;
-    z-index: 100;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
@@ -346,7 +249,7 @@ nav ul li ul li a:hover {
         z-index: 100;
     }
 
-    #check__menu:checked~nav ul {
+    #check__menu:checked~nav>ul {
         height: 300px;
         visibility: visible;
         opacity: 1;
@@ -371,56 +274,91 @@ h4 {
 }
 
 
-#paypal-button-container{
-    margin: 50px;
-    padding: 50px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-    box-sizing: border-box;
-    border-top: 50px;
-}
-
-.card {
+/*Boton y tarjetas*/
+.boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 40px;
+    background: black;
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: .3s ease all;
+    border-radius: 20px;
     position: relative;
-    width: 280px;
-    height: 500px;
-    margin: 20px 40px;
-    float: left;
-    text-align: center;
-}
-
-.card .face {
-    background-color: black;
-    position: absolute;
-    width: 300px;
-    height: 470px;
-    backface-visibility: hidden;
-    border-radius: 10px;
     overflow: hidden;
-    transition: 1.5s;
 }
 
-.card .front {
-    transform: perspective(600px) rotateY(0deg);
-    box-shadow: 0 5px 10px #000;
+.boton span{
+    position: relative;
+    z-index: 2;
+    transition: .3s ease all;
 }
 
-.card .front img {
-    position: center;
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    }
+.boton::after {
+    content: "";
+    width: 110%;
+    height: 50px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: calc(-100% - 40px);
+    background: black;
+    border-bottom: 50px solid rgb(21, 228, 131);
+    border-right: 40px solid transparent;
+    transition: .4s ease-in-out all;
+}
 
-.card .front h3 {
-    position:relative;
-    bottom: 0;
-    width: 300px;
-    height: 45px;
-    line-height: 45px;
-    color: #fff;
-    background: #00000066;
+.boton:hover::after {
+    left: 0;
+}
+
+#paddingboton {
+    padding-bottom: 15px;
+}
+
+/*Texto tarjetas*/
+
+#espaciado {
+    letter-spacing: 0.3em;
+    line-height: normal;
     text-align: center;
-    font-size: 16px;
-    }
+    font-size: 34px;
+}
+
+.borde{
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+}
+
+.borde.boton {
+    align-items: center;
+}
+
+/*Textos*/
+p {
+    position: relative;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 75px;
+    width: 80%;
+}
+
+
+/*Carrusel*/
+
+.carruselimg {
+    height: 305px;
+    width: 100%;
+    object-fit: cover;
+}
+
+#container {
+    padding-top: 25px;
+}
