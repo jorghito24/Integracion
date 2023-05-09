@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static '../static/css/estilos.css' %}">
+    <link rel="stylesheet" href="{% static '../static/css/contacto.css' %}">
+    <script src="https://kit.fontawesome.com/e973458850.js" crossorigin="anonymous"></script>
+    <title>Mi Condominio</title>
+</head>
+<body>
+    <header>
+        <div class="header__superior">
+          <div class="logo">
+            <a href="{% url 'index' %}">
+              <img src="{%static '../static/img/otro.png'%}" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="container__menu">
+          <div class="menu">
+            <input type="checkbox" id="check__menu">
+            <label id="label__check" for="check__menu">
+              <i class="fa-solid fa-bars icon__menu"></i>
+            </label>
+            <nav>
+              <ul>
+                <li><a href="{% url 'index' %}">Inicio</a></li>
+                <li><a href="{% url 'login' %}">Iniciar Sesión</a></li>
+                <li><a href="{% url 'nosotros' %}">Quienes Somos</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <!-- Formulario Contacto -->
+    <main>
+        <div class="container">
+            <div class="panel-heading">
+                <h4>Formulario de Contacto</h4>
+            </div>
+            <div class="panel-body">
+                <form class="form-horizontal" id="signupForm" action="https://formspree.io/f/mqkonrly" method="POST">
+
+                    <div class="form-group">
+                        <label for="fullname" class="col-sm-2 control-label">Nombre</label>
+                        <div class="col-sm-3">
+                            <input type="text" id="fullname" name="fullname" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="col-sm-2 control-label">Correo electronico</label>
+                        <div class="col-sm-5">
+                            <input type="text" id="email" name="email" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="col-sm-2 control-label">Número Celular</label>
+                        <div class="col-sm-3">
+                            <input type="text" id="password" name="password" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-2">
+                            <label for="luckynumber">Tipo de comentario</label>
+                            <select name="luckynumber" id="luckynumber" class="form-control">
+                                <option value="">Seleccionar</option>
+                                <option value="double zero">Queja</option>
+                                <option value="seven">Agradecimiento</option>
+                                <option value="thirteen">General</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="comments" class="col-sm-2 control-label">Comentario</label>
+                        <div class="col-sm-5">
+                            <textarea name="comments" id="comments" cols="40" rows="5" class="form-control"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <input type="submit" class="btn btn-primary" value="Enviar" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
