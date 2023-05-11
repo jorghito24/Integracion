@@ -15,6 +15,8 @@
   <script src="https://kit.fontawesome.com/e973458850.js" crossorigin="anonymous"></script>
   <script
     src="https://www.paypal.com/sdk/js?client-id=AX3m21yFi-9sU4Aze2QnaJi9xb-Pdy4gDRlTNR1nTNeXNrYomJiN1EZHHM7CGcKC_pnCXEHu0N026AmW"></script>
+  <script src="{% static '../static/js/script.js' %}"></script>
+  <script src="https://sdk.mercadopago.com/js/v2"></script>
   <title>Mi Condominio</title>
 
 </head>
@@ -51,20 +53,19 @@
     </div>
   </header>
 
-  <!--Tarjetas-->
-  <div class="card">
-    <div class="face front">
 
-      <img src="{%static '../static/img/gastoscomunes.png'%}" alt="">
-      <p class="precio"><strong>$50.000</strong><span class="u-pull-right"></span></p>
-      <h3><b>Gastos Comunes</b></h3>
+<div class="gastos">
+  <h1 id="product-description">Gastos Comunes</h1>
+  <img src="{%static '../static/img/gastoscomunes.png'%}" class="gastosy" alt="">
+  <p><small>$50.000</small></p>
 
+  <button id="checkout-btn">Checkout</button>
 
-    </div>
-  </div>
-
+  <div id="button-checkout"></div>
+</div>
+  <script src="{%static '../static/js/index.js'%}"></script>
   <!--Boton Paypal-->
-  <div class="container-paypal">
+  <!--<div class="container-paypal">
     <div id="paypal-button-container"></div>
 
     <script>
@@ -97,7 +98,7 @@
       }).render('#paypal-button-container')
     </script>
 
-  </div>
+  </div>-->
 
   <!--Footer-->
 
@@ -119,7 +120,7 @@
     <br>
   </footer>
   <script src="https://js.stripe.com/v3/"></script>
-  <script src="{% static '../static/js/script.js' %}" type="module"></script>
+  
 </body>
 
 </html>
