@@ -1,0 +1,42 @@
+{% extends "core/base.html" %}
+
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static '../static/css/estilos.css' %}">
+    <link rel="stylesheet" href="{% static '../static/css/login.css' %}">
+{% endblock %}
+
+{% block contenido %}
+
+<br><br><br><br>
+{% load crispy_forms_tags %}
+<section>
+    <div class="container-fluid h-custom">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-sm-5">
+          <img src="{% static '../static/img/otro.png'%}"
+            class="img-fluid" alt="Sample image">
+        </div>
+        <div class="col-12 col-sm-5">
+          <div class="card">
+            <div class="card-body">
+                <form action="" method="post">
+                    <h2>Ingrese sus datos</h2>
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    
+                    <a href="{% url 'index' %}">Ir al inicio</a> 
+
+                    <br><br>
+                    <input type="submit" value="iniciar sesion" class="btn btn-success">
+        
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br><br><br><br>
+{% endblock %}
