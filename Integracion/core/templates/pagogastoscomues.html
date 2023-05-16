@@ -13,10 +13,8 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="{% static '../static/css/estilos.css' %}">
   <script src="https://kit.fontawesome.com/e973458850.js" crossorigin="anonymous"></script>
-  <script
-    src="https://www.paypal.com/sdk/js?client-id=AX3m21yFi-9sU4Aze2QnaJi9xb-Pdy4gDRlTNR1nTNeXNrYomJiN1EZHHM7CGcKC_pnCXEHu0N026AmW"></script>
-  <script src="{% static '../static/js/script.js' %}"></script>
-  <script src="https://sdk.mercadopago.com/js/v2"></script>
+  <script src="https://www.paypal.com/sdk/js?client-id=AX3m21yFi-9sU4Aze2QnaJi9xb-Pdy4gDRlTNR1nTNeXNrYomJiN1EZHHM7CGcKC_pnCXEHu0N026AmW"></script>
+  
   <title>Mi Condominio</title>
 
 </head>
@@ -53,17 +51,19 @@
     </div>
   </header>
 
+  <div class="container-principal">
+    <div class="card">
+      <div class="imgbox">
+        <img src="{%static '../static/img/gastoscomunes.png'%}" alt="">
+      </div>
+      <div class="contentBox">
+        <h3>Gastos Comunes</h3>
+        <h2 class="price">$50.000</h2>
+        <a href="" class="buy">Pagar</a>
+      </div>
+    </div>
+  </div>
 
-<div class="gastos">
-  <h1 id="product-description">Gastos Comunes</h1>
-  <img src="{%static '../static/img/gastoscomunes.png'%}" class="gastosy" alt="">
-  <p><small>$50.000</small></p>
-
-  <button id="checkout-btn">Checkout</button>
-
-  <div id="button-checkout"></div>
-</div>
-  <script src="{%static '../static/js/index.js'%}"></script>
   <!--Boton Paypal-->
   <!--<div class="container-paypal">
     <div id="paypal-button-container"></div>

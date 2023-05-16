@@ -22,3 +22,7 @@ def contacto(request):
 
 def pagogastoscomues(request):
     return render(request, 'pagogastoscomues.html')
+
+def transbank():{
+    
+}

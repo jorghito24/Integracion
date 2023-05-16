@@ -173,7 +173,7 @@ input[name="phone"] {
     border: 3px solid #bb2929;
 }
 
-@media screen and (max-width: 800px) {
+@media(max-width: 720px) {
     .formulario {
         grid-template-columns: 1fr;
     }
